@@ -1,3 +1,20 @@
 body {
+  @extend %mont-400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  padding: 20px 0;
+  min-height: 1000px;
+}
 
+.container{
+  max-width: 707px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a{
+  @extend %mont-500;
+  color: #0138B6;
+  text-decoration-line: underline;
 }
