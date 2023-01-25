@@ -3,395 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body {
-      font-family: "Montserrat-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    a {
-      font-family: "Montserrat-Medium", sans-serif;
-      font-weight: 500;
-    }
-
-    .page__title,
-    .aero-top__title,
-    .formacar__title {
-      font-family: "Montserrat-Bold", sans-serif;
-      font-weight: 700;
-    }
-
-    .top__text {
-      font-family: "Oswald-Light", sans-serif;
-      font-weight: 300;
-    }
-
-    .where-buy__title,
-    .page__subtitle,
-    .aero-top__info-title,
-    .aero-top__subtitle,
-    .formacar__subtitle {
-      font-family: "Oswald-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    .aero-top__info-text {
-      font-family: "Steppe-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Montserrat-Regular"), url("./") format("ttf"), url("./fonts/montserrat/Montserrat-Regular.woff") format("woff"), url("./fonts/montserrat/Montserrat-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Medium";
-      font-weight: 500;
-      font-style: normal;
-      src: local("Montserrat-Medium"), url("./fonts/montserrat/Montserrat-Medium.ttf") format("ttf"), url("./fonts/montserrat/Montserrat-Medium.woff") format("woff"), url("./fonts/montserrat/Montserrat-Medium.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Bold";
-      font-weight: 500;
-      font-style: normal;
-      src: local("Montserrat-Bold"), url("./fonts/montserrat/Montserrat-Bold.ttf") format("ttf"), url("./fonts/montserrat/Montserrat-Bold.woff") format("woff"), url("./fonts/montserrat/Montserrat-Bold.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Oswald-Light";
-      font-weight: 300;
-      font-style: normal;
-      src: local("Oswald-Light"), url("./fonts/oswald/Oswald-Light.ttf") format("ttf"), url("./fonts/oswald/Oswald-Light.woff") format("woff"), url("./fonts/oswald/Oswald-Light.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Oswald-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Oswald-Regular"), url("./fonts/oswald/Oswald-Regular.ttf") format("ttf"), url("./fonts/oswald/Oswald-Regular.woff") format("woff"), url("./fonts/oswald/Oswald-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Steppe-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Steppe-Regular"), url("./fonts/steppe/Steppe-Regular.ttf") format("ttf"), url("./fonts/steppe/Steppe-Regular.woff") format("woff"), url("./fonts/steppe/Steppe-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    html {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-
-    *,
-    *::after,
-    *::before {
-      -webkit-box-sizing: inherit;
-      box-sizing: inherit;
-    }
-
-    ul[class],
-    ol[class] {
-      padding: 0;
-    }
-
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul[class],
-    ol[class],
-    li,
-    figure,
-    figcaption,
-    blockquote,
-    dl,
-    dd {
-      margin: 0;
-    }
-
-    ul[class] {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    input,
-    button,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    body {
-      font-size: 16px;
-      line-height: 16px;
-      color: #000;
-      padding: 20px 0;
-      min-height: 1000px;
-    }
-
-    .container {
-      max-width: 707px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    a {
-      color: #0138b6;
-      text-decoration-line: underline;
-    }
-
-    .top__inner {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    .top__box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    .top__box-info {
-      margin-left: 10px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .top__text {
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-      font-size: 14px;
-      letter-spacing: .05em;
-      white-space: nowrap;
-    }
-
-    .top__text:not(:last-child) {
-      margin-bottom: 5px;
-    }
-
-    .top__logo {
-      margin-right: 20px;
-    }
-
-    .formacar {
-      padding-top: 50px;
-    }
-
-    .formacar__inner {
-      max-width: 603px;
-    }
-
-    .formacar__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .formacar__subtitle {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-    }
-
-    .formacar__imgbox {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .aero-top {
-      padding-top: 30px;
-    }
-
-    .aero-top__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .aero-top__subtitle {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      margin-bottom: 50px;
-    }
-
-    .aero-top__img {
-      margin-bottom: 50px;
-    }
-
-    .aero-top__info-title {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      margin-bottom: 20px;
-    }
-
-    .aero-top__info-text {
-      line-height: 19px;
-    }
-
-    .menu {
-      padding-top: 30px;
-    }
-
-    .menu__box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin-bottom: 50px;
-    }
-
-    .menu__box div:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    .page {
-      padding-top: 30px;
-    }
-
-    .page img {
-      margin-bottom: 50px;
-    }
-
-    .page__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .page__subtitle {
-      font-size: 18px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      margin-bottom: 50px;
-    }
-
-    .where-buy img {
-      margin-bottom: 30px;
-    }
-
-    .where-buy__title {
-      font-size: 18px;
-      margin-bottom: 30px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    .where-buy__item {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .where-buy__item:not(:last-child) {
-      margin-bottom: 50px;
-    }
-
-    .where-buy__item-num {
-      width: 20px;
-      margin-right: 5px;
-    }
-
-    .where-buy__content-title {
-      margin-bottom: 10px;
-    }
-
-    .where-buy__content-item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    .where-buy__content-name {
-      display: inline-block;
-      width: 80px;
-      color: #85868b;
-    }
-  </style>
 </head>
 
-<body>
+<body style="margin: 0;">
 
-  <div class="top">
-    <div class="container">
-      <div class="top__inner">
-        <div class="top__box">
-          <img src="images/index/1.png" alt="">
-          <div class="top__box-info">
-            <p class="top__text">
+  <div style="padding: 20px 0 50px;">
+    <div style="max-width: 667px; padding: 0 15px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex;">
+          <img style="margin-right: 8px;" width="58" height="54" src="images/index/1.png" alt="">
+          <div>
+            <p style="margin: 0 0 8px 0; font-size: 12px;">
               THE LINK WILL BE AVAILABLE WITHIN 30 DAYS. <br>
               CREATED USING FORMACAR MOBILE 3D CONFIGURATOR.
             </p>
-            <p class="top__text">
+            <p style="margin: 0; font-size: 12px;">
               FLIP YOUR MOBILE DEVICE OVER FOR EASIER VIEWING.
             </p>
           </div>
         </div>
-        <div class="top__box">
-          <img class="top__logo" src="images/logo.png" alt="">
-          <img src="images/qr.png" alt="">
+        <div style="display: flex; align-items: center;">
+          <img style="margin-right: 20px;" width="135" hidden68 src="images/logo.png" alt="">
+          <img width="80" height="80" src="images/qr.png" alt="">
         </div>
       </div>
     </div>
   </div>
-  <div class="formacar">
-    <div class="container">
-      <div class="formacar__inner">
-        <div class="formacar__title">
+  <div>
+    <div style="max-width: 667px; padding: 0 15px; margin: 0 auto;">
+      <div>
+        <div style="font-size: 24px; line-height: 16px; margin-bottom: 10px;">
           Lamborghini urus
         </div>
-        <div class="formacar__subtitle">
+        <div style="font-size: 18px; text-transform: uppercase;">
           Formacar SCL
         </div>
-        <div class="formacar__imgbox">
-          <img src="images/index/2.png" alt="">
-          <img src="images/index/3.png" alt="">
+        <div>
+          <img width="321" height="212" src="images/index/2.png" alt="">
+          <img width="342" height="212" src="images/index/3.png" alt="">
         </div>
-        <img src="images/index/4.png" alt="">
-        <img src="images/index/5.png" alt="">
+        <img width="667" height="320" src="images/index/4.png" alt="">
+        <img width="667" height="320" src="images/index/5.png" alt="">
       </div>
     </div>
   </div>

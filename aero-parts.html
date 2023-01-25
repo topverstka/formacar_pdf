@@ -3,379 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body {
-      font-family: "Montserrat-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    a {
-      font-family: "Montserrat-Medium", sans-serif;
-      font-weight: 500;
-    }
-
-    .page__title,
-    .aero-top__title,
-    .formacar__title {
-      font-family: "Montserrat-Bold", sans-serif;
-      font-weight: 700;
-    }
-
-    .top__text {
-      font-family: "Oswald-Light", sans-serif;
-      font-weight: 300;
-    }
-
-    .where-buy__title,
-    .page__subtitle,
-    .aero-top__info-title,
-    .aero-top__subtitle,
-    .formacar__subtitle {
-      font-family: "Oswald-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    .aero-top__info-text {
-      font-family: "Steppe-Regular", sans-serif;
-      font-weight: 400;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Montserrat-Regular"), url("./fonts/montserrat/Montserrat-Regular.ttf") format("ttf"), url("./fonts/montserrat/Montserrat-Regular.woff") format("woff"), url("./fonts/montserrat/Montserrat-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Medium";
-      font-weight: 500;
-      font-style: normal;
-      src: local("Montserrat-Medium"), url("./fonts/montserrat/Montserrat-Medium.ttf") format("ttf"), url("./fonts/montserrat/Montserrat-Medium.woff") format("woff"), url("./fonts/montserrat/Montserrat-Medium.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Montserrat-Bold";
-      font-weight: 500;
-      font-style: normal;
-      src: local("Montserrat-Bold"), url("./fonts/montserrat/Montserrat-Bold.ttf") format("ttf"), url("./fonts/montserrat/Montserrat-Bold.woff") format("woff"), url("./fonts/montserrat/Montserrat-Bold.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Oswald-Light";
-      font-weight: 300;
-      font-style: normal;
-      src: local("Oswald-Light"), url("./fonts/oswald/Oswald-Light.ttf") format("ttf"), url("./fonts/oswald/Oswald-Light.woff") format("woff"), url("./fonts/oswald/Oswald-Light.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Oswald-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Oswald-Regular"), url("./fonts/oswald/Oswald-Regular.ttf") format("ttf"), url("./fonts/oswald/Oswald-Regular.woff") format("woff"), url("./fonts/oswald/Oswald-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Steppe-Regular";
-      font-weight: 400;
-      font-style: normal;
-      src: local("Steppe-Regular"), url("./fonts/steppe/Steppe-Regular.ttf") format("ttf"), url("./fonts/steppe/Steppe-Regular.woff") format("woff"), url("./fonts/steppe/Steppe-Regular.woff2") format("woff2");
-      font-display: swap;
-    }
-
-    html {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-
-    *,
-    *::after,
-    *::before {
-      -webkit-box-sizing: inherit;
-      box-sizing: inherit;
-    }
-
-    ul[class],
-    ol[class] {
-      padding: 0;
-    }
-
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul[class],
-    ol[class],
-    li,
-    figure,
-    figcaption,
-    blockquote,
-    dl,
-    dd {
-      margin: 0;
-    }
-
-    ul[class] {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    input,
-    button,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    body {
-      font-size: 16px;
-      line-height: 16px;
-      color: #000;
-      padding: 20px 0;
-      min-height: 1000px;
-    }
-
-    .container {
-      max-width: 707px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    a {
-      color: #0138b6;
-      text-decoration-line: underline;
-    }
-
-    .top__inner {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    .top__box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    .top__box-info {
-      margin-left: 10px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .top__text {
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-      font-size: 14px;
-      letter-spacing: .05em;
-      white-space: nowrap;
-    }
-
-    .top__text:not(:last-child) {
-      margin-bottom: 5px;
-    }
-
-    .top__logo {
-      margin-right: 20px;
-    }
-
-    .formacar {
-      padding-top: 50px;
-    }
-
-    .formacar__inner {
-      max-width: 603px;
-    }
-
-    .formacar__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .formacar__subtitle {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-    }
-
-    .formacar__imgbox {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .aero-top {
-      padding-top: 30px;
-    }
-
-    .aero-top__info-images{
-      display: flex;
-    }
-
-    .aero-top__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .aero-top__subtitle {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      margin-bottom: 50px;
-    }
-
-    .aero-top__img {
-      margin-bottom: 50px;
-    }
-
-    .aero-top__info-title {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      margin-bottom: 20px;
-    }
-
-    .aero-top__info-text {
-      line-height: 19px;
-    }
-
-    .menu {
-      padding-top: 30px;
-    }
-
-    .menu__box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin-bottom: 50px;
-    }
-
-    .menu__box div:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    .page {
-      padding-top: 30px;
-    }
-
-    .page img {
-      margin-bottom: 50px;
-    }
-
-    .page__title {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .page__subtitle {
-      font-size: 18px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      margin-bottom: 50px;
-    }
-
-    .where-buy img {
-      margin-bottom: 30px;
-    }
-
-    .where-buy__title {
-      font-size: 18px;
-      margin-bottom: 30px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    .where-buy__item {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .where-buy__item:not(:last-child) {
-      margin-bottom: 50px;
-    }
-
-    .where-buy__item-num {
-      width: 20px;
-      margin-right: 5px;
-    }
-
-    .where-buy__content-title {
-      margin-bottom: 10px;
-    }
-
-    .where-buy__content-item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    .where-buy__content-name {
-      display: inline-block;
-      width: 80px;
-      color: #85868b;
-    }
-  </style>
 </head>
 
-<body>
+<body style="margin: 0;">
 
-  <div class="aero-top">
-    <div class="container">
-      <div class="aero-top__title">
+  <div style="padding: 50px 0 70px;">
+    <div style="max-width: 667px; padding: 0 15px; margin: 0 auto;">
+      <div style="font-size: 24px; line-height: 16px; margin-bottom: 10px;">
         Aero parts
       </div>
-      <div class="aero-top__subtitle">
+      <div style="font-size: 18px; line-height: 16px; text-transform: uppercase; margin-bottom: 50px;">
         Formacar SCL lamborghini urus
       </div>
-      <div class="aero-top__info">
-        <div class="aero-top__info-images">
-          <img class="aero-top__img" src="images/aero-1.jpg" alt="">
-          <img class="aero-top__img" src="images/aero-2.jpg" alt="">
+      <div>
+        <div style="margin-bottom: 50px;">
+          <img width="321" height="212" src="images/aero-1.png" alt="">
+          <img width="342" height="212" src="images/aero-2.png" alt="">
+          <img width="667" height="320" src="images/aero.png" alt="">
         </div>
-        <div class="aero-top__info-title">
+        <div style="font-size: 18px; line-height: 16px; text-transform: uppercase; margin-bottom: 20px;">
           SCL performance Lamborghini Urus
         </div>
-        <div class="aero-top__info-text">
+        <div>
           SCL GLOBAL Concept is proud to introduce its largest-scale styling kit for the Lamborghini Urus so far. The
           extensive aerodynamic package incorporates 42 parts. <br>
           <br>
@@ -398,28 +48,28 @@
       </div>
     </div>
   </div>
-  <div class="menu">
-    <div class="container">
-      <div class="menu__box">
-        <div>
-          <a href="#">A Sourse</a>
+  <div>
+    <div style="max-width: 667px; padding: 0 15px; margin: 0 auto;">
+      <div style="margin-bottom: 50px;">
+        <div style="margin-bottom: 20px;">
+          <a style="color: #0138B6;" href="#">A Sourse</a>
         </div>
-        <div>More information in the catalog <a href="#">Formacar</a></div>
-        <div>
-          <a href="#">Facebook</a>
+        <div style="margin-bottom: 20px;">More information in the catalog <a style="color: #0138B6;" href="#">Formacar</a></div>
+        <div style="margin-bottom: 20px;">
+          <a style="color: #0138B6;" href="#">Facebook</a>
         </div>
-        <div>
-          <a href="#">Youtube</a>
+        <div style="margin-bottom: 20px;">
+          <a  style="color: #0138B6;"href="#">Youtube</a>
         </div>
-        <div>
-          <a href="#">Instagram</a>
+        <div style="margin-bottom: 20px;">
+          <a style="color: #0138B6;" href="#">Instagram</a>
         </div>
-        <div>Official page <a href="#">SCL PERFORMANCE</a></div>
+        <div>Official page <a style="color: #0138B6;" href="#">SCL PERFORMANCE</a></div>
       </div>
-      <div class="menu__info-text">
+      <div>
         <!-- text -->
       </div>
-      <img src="images/img-1.jpg" alt="">
+      <img width="667" height="400" src="images/img-1.jpg" alt="">
     </div>
   </div>
 
